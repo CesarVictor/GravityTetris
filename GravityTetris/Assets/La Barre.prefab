@@ -261,6 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9197008144793060501}
+  - component: {fileID: -3831777173760766331}
   m_Layer: 0
   m_Name: La Barre
   m_TagString: Untagged
@@ -287,6 +288,20 @@ Transform:
   - {fileID: 5519143798494712707}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3831777173760766331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081958895317023435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c7095e962fbfa4abcb1ce592f0772b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationPoint: {x: 0, y: 0, z: 0}
+  fallTime: 0.8
 --- !u!1 &7300264488830887535
 GameObject:
   m_ObjectHideFlags: 0
