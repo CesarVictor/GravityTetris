@@ -28,10 +28,6 @@ public class MovementBlock : MonoBehaviour
             transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0,0,1), 90);
         }
 
-        if(Time.time - previousTime > (Input.GetKey(KeyCode.DownArrow) ? fallTime / 10 : fallTime)){
-            transform.position += new Vector3(0,-1,0);
-            previousTime = Time.time;
-        }
         }
     }
 
