@@ -9,20 +9,23 @@ public class MovementBlock : MonoBehaviour
 {
     public Vector3 rotationPoint;
     private float previousTime;
-    public float fallTime = 0.8f;
+    public float fallTime = 10f;
     public Text Life;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow)){
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
             transform.position += new Vector3(-1, 0, 0);
         }
 
-        if(Input.GetKeyDown(KeyCode.RightArrow)){
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
             transform.position += new Vector3(1, 0, 0);
         }
 
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
-            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0,0,1), 90);
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), 90);
         }
 
     }
@@ -34,6 +37,10 @@ public class MovementBlock : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D MovementBlock)
     { 
+        if(Time.time - previousTime > (Input.GetKey(KeyCode.DownArrow) ? fallTime / 10 : fallTime)){ 
+            transform.position += new Vector3(0,-1,0); 
+            previousTime = Time.time;
+        }
         if (MovementBlock.gameObject.tag == "mur") 
             Destroy(this.gameObject);
             // life = life-1;
@@ -45,5 +52,4 @@ public class MovementBlock : MonoBehaviour
             // for (int i = lifemax-life; i > 0; i--) 
             //     Life.text += moinsvie;
     } 
-    }
-
+}
