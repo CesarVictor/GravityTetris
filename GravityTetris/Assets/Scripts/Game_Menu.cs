@@ -14,7 +14,6 @@ public class Game_Menu : MonoBehaviour
     public GameObject Base_4;
     public GameObject Base_5;
     public GameObject Base_6;
-
     public Text life;
     private void Start() {
         int number = Random.Range(1, 6);

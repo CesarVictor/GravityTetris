@@ -8,19 +8,23 @@ public class Collision : MonoBehaviour
     private bool canSpawnNewTetromino = true;
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Plateforme") && canSpawnNewTetromino)
+        if (other.gameObject.CompareTag("Plateforme")  && canSpawnNewTetromino)
         {
-            Debug.Log("Collided with Plateforme");
             DisableMovementBlock();
             SpawnerTetromino spawnerTetromino = FindObjectOfType<SpawnerTetromino>();
             spawnerTetromino.NewTetromino();
             this.tag = "Plateforme";
-            Debug.Log("Tag changed to Plateforme");
             print(this.tag);
-            canSpawnNewTetromino = false;
-            
-            //Invoke("ResetSpawnCondition", 0.5f);
-            
+            canSpawnNewTetromino = false;    
+        }
+        if (other.gameObject.CompareTag("mur")  && canSpawnNewTetromino)
+        {
+            DisableMovementBlock();
+            SpawnerTetromino spawnerTetromino = FindObjectOfType<SpawnerTetromino>();
+            spawnerTetromino.NewTetromino();
+            this.tag = "Plateforme";
+            print(this.tag);
+            canSpawnNewTetromino = false;            
         }
     }
 
@@ -37,7 +41,4 @@ public class Collision : MonoBehaviour
     {
         canSpawnNewTetromino = true;
     }
-    
-    
-
 }
