@@ -484,8 +484,8 @@ Canvas:
   m_GameObject: {fileID: 979603910}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -549,12 +549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ca41c81bd71e544879397624270d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Base_1: {fileID: 6756822252100828052, guid: 9abc6616070fa6145a498620b4b872ed, type: 3}
-  Base_2: {fileID: 5473337774446075358, guid: 461cd354feb5caa4c973e17da015b270, type: 3}
-  Base_3: {fileID: 6958195416637099186, guid: fe0c853fa496fe34884fcbf8fd89c3a0, type: 3}
-  Base_4: {fileID: 3607507555581189070, guid: ae18fd9b5738b184e8c616cea64b9af2, type: 3}
-  Base_5: {fileID: 2522280778378140434, guid: 4327843fec2b8bc4dbccc61926276069, type: 3}
-  Base_6: {fileID: 49436594814114929, guid: 787aed21daee80e4d89da7cd6136a8f5, type: 3}
 --- !u!4 &1043287438
 Transform:
   m_ObjectHideFlags: 0

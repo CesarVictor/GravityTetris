@@ -14,8 +14,8 @@ public class Game_Menu : MonoBehaviour
     public GameObject Base_4;
     public GameObject Base_5;
     public GameObject Base_6;
-    public Text life;
     private void Start() {
+        timeRemaining = 0;
         int number = Random.Range(1, 6);
         Vector2 pos = new Vector2(15.59f, -12.38f);
         if (number == 1)
@@ -30,7 +30,9 @@ public class Game_Menu : MonoBehaviour
         Instantiate(Base_5, pos, Quaternion.identity);
         else if (number == 6)
         Instantiate(Base_6, pos, Quaternion.identity);
-        life.text = "♥♥♥";
+        SpawnerTetromino.isSpawning = false;
+        SpawnerTetromino spawnerTetromino = FindObjectOfType<SpawnerTetromino>();
+        spawnerTetromino.NewTetromino();
     }
 
     public void Quit()
@@ -38,7 +40,7 @@ public class Game_Menu : MonoBehaviour
     SceneManager.LoadScene("Menu_Principal");
     }
     public Text startText;
-    float timeRemaining ;
+    public static float timeRemaining ;
     void Update()
     {
         timeRemaining += Time.deltaTime;
